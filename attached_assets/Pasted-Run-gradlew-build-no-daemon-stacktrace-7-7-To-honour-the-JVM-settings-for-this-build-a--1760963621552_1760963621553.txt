@@ -1,0 +1,1487 @@
+Run ./gradlew build --no-daemon --stacktrace
+7
+  
+7
+To honour the JVM settings for this build a single-use Daemon process will be forked. See https://docs.gradle.org/8.1.1/userguide/gradle_daemon.html#sec:disabling_the_daemon.
+8
+Daemon will be stopped at the end of the build 
+10
+> Task :compileJava
+11
+Setting up MCP environment
+12
+Initializing steps
+13
+Executing steps
+14
+ > Running 'downloadManifest'
+15
+ > Running 'downloadJson'
+16
+ > Running 'downloadClient'
+17
+ > Running 'downloadServer'
+18
+ > Running 'extractServer'
+19
+ > Running 'downloadClientMappings'
+20
+ > Running 'mergeMappings'
+21
+ > Running 'stripClient'
+22
+ > Running 'stripServer'
+23
+ > Running 'merge'
+24
+ > Running 'listLibraries'
+25
+ > Running 'rename'
+26
+Stopping at requested step: /home/runner/.gradle/caches/forge_gradle/mcp_repo/de/oceanlabs/mcp/mcp_config/1.20.1-20230612.114412/joined/rename/output.jar
+27
+[12:22:32] [main/INFO]: Writing debug log file accesstransform.log
+28
+[12:22:32] [main/INFO]: Access Transformer processor running version 8.2.1
+29
+[12:22:32] [main/INFO]: Command line arguments [--inJar, /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.3.0/forge-1.20.1-47.3.0-injected.jar, --outJar, /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.3.0_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.3.0_mapped_parchment_2023.09.03-1.20.1.jar, --logFile, accesstransform.log, --atFile, /home/runner/work/TOtest4/TOtest4/build/_atJar_4/parent_at.cfg]
+30
+[12:22:32] [main/INFO]: Reading from /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.3.0/forge-1.20.1-47.3.0-injected.jar
+31
+[12:22:32] [main/INFO]: Writing to /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.3.0_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.3.0_mapped_parchment_2023.09.03-1.20.1.jar
+32
+[12:22:32] [main/INFO]: Transformer file /home/runner/work/TOtest4/TOtest4/build/_atJar_4/parent_at.cfg
+33
+[12:22:32] [main/WARN]: Found existing output jar /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.3.0_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.3.0_mapped_parchment_2023.09.03-1.20.1.jar, overwriting
+34
+[12:22:35] [main/INFO]: JAR transformation complete /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.3.0_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.3.0_mapped_parchment_2023.09.03-1.20.1.jar
+35
+Creating SRG -> MCP TSRG
+36
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/overlay/ScreenEffectOverlayHelper.java:49: error: method enableScissor in class GuiGraphics cannot be applied to given types;
+37
+        PoseStack poseStack = guiGraphics.enableScissor();
+38
+                                         ^
+39
+  required: int,int,int,int
+40
+  found:    no arguments
+41
+  reason: actual and formal argument lists differ in length
+42
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/overlay/ScreenEffectOverlayHelper.java:54: error: no suitable method found for vertex(Mode,VertexFormat)
+43
+        buffer.vertex(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_COLOR);
+44
+              ^
+45
+    method VertexConsumer.vertex(Matrix4f,float,float,float) is not applicable
+46
+      (actual and formal argument lists differ in length)
+47
+    method BufferVertexConsumer.vertex(double,double,double) is not applicable
+48
+      (actual and formal argument lists differ in length)
+49
+    method BufferBuilder.vertex(float,float,float,float,float,float,float,float,float,int,int,float,float,float) is not applicable
+50
+      (actual and formal argument lists differ in length)
+51
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/overlay/ScreenEffectOverlayHelper.java:56: error: incompatible types: Matrix4f cannot be converted to Matrix3f
+52
+        buffer.normal(matrix, 0.0f, (float)screenHeight, 0.0f).normal(red, green, blue, alpha).endVertex();
+53
+                      ^
+54
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/overlay/ScreenEffectOverlayHelper.java:57: error: incompatible types: Matrix4f cannot be converted to Matrix3f
+55
+        buffer.normal(matrix, (float)screenWidth, (float)screenHeight, 0.0f).normal(red, green, blue, alpha).endVertex();
+56
+                      ^
+57
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/overlay/ScreenEffectOverlayHelper.java:58: error: incompatible types: Matrix4f cannot be converted to Matrix3f
+58
+        buffer.normal(matrix, (float)screenWidth, 0.0f, 0.0f).normal(red, green, blue, alpha).endVertex();
+59
+                      ^
+60
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/overlay/ScreenEffectOverlayHelper.java:59: error: incompatible types: Matrix4f cannot be converted to Matrix3f
+61
+        buffer.normal(matrix, 0.0f, 0.0f, 0.0f).normal(red, green, blue, alpha).endVertex();
+62
+                      ^
+63
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/overlay/ScreenEffectOverlayHelper.java:60: error: no suitable method found for bindImmediateBuffer(BufferBuilder.RenderedBuffer)
+64
+        BufferUploader.bindImmediateBuffer((BufferBuilder.RenderedBuffer)buffer.end());
+65
+                      ^
+66
+    method BufferUploader.bindImmediateBuffer(VertexFormat) is not applicable
+67
+      (argument mismatch; BufferBuilder.RenderedBuffer cannot be converted to VertexFormat)
+68
+    method BufferUploader.bindImmediateBuffer(VertexBuffer) is not applicable
+69
+      (argument mismatch; BufferBuilder.RenderedBuffer cannot be converted to VertexBuffer)
+70
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/overlay/ScreenEffectOverlayHelper.java:73: error: method enableScissor in class GuiGraphics cannot be applied to given types;
+71
+            PoseStack poseStack = guiGraphics.enableScissor();
+72
+                                             ^
+73
+  required: int,int,int,int
+74
+  found:    no arguments
+75
+  reason: actual and formal argument lists differ in length
+76
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/overlay/ScreenEffectOverlayHelper.java:78: error: no suitable method found for vertex(Mode,VertexFormat)
+77
+            buffer.vertex(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_COLOR);
+78
+                  ^
+79
+    method VertexConsumer.vertex(Matrix4f,float,float,float) is not applicable
+80
+      (actual and formal argument lists differ in length)
+81
+    method BufferVertexConsumer.vertex(double,double,double) is not applicable
+82
+      (actual and formal argument lists differ in length)
+83
+    method BufferBuilder.vertex(float,float,float,float,float,float,float,float,float,int,int,float,float,float) is not applicable
+84
+      (actual and formal argument lists differ in length)
+85
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/overlay/ScreenEffectOverlayHelper.java:80: error: incompatible types: Matrix4f cannot be converted to Matrix3f
+86
+            buffer.normal(matrix, 0.0f, (float)screenHeight, 0.0f).normal(red, green, blue, alpha).endVertex();
+87
+                          ^
+88
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/overlay/ScreenEffectOverlayHelper.java:81: error: incompatible types: Matrix4f cannot be converted to Matrix3f
+89
+            buffer.normal(matrix, (float)screenWidth, (float)screenHeight, 0.0f).normal(red, green, blue, alpha).endVertex();
+90
+                          ^
+91
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/overlay/ScreenEffectOverlayHelper.java:82: error: incompatible types: Matrix4f cannot be converted to Matrix3f
+92
+            buffer.normal(matrix, (float)screenWidth, 0.0f, 0.0f).normal(red, green, blue, alpha).endVertex();
+93
+                          ^
+94
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/overlay/ScreenEffectOverlayHelper.java:83: error: incompatible types: Matrix4f cannot be converted to Matrix3f
+95
+            buffer.normal(matrix, 0.0f, 0.0f, 0.0f).normal(red, green, blue, alpha).endVertex();
+96
+                          ^
+97
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/overlay/ScreenEffectOverlayHelper.java:84: error: no suitable method found for bindImmediateBuffer(BufferBuilder.RenderedBuffer)
+98
+            BufferUploader.bindImmediateBuffer((BufferBuilder.RenderedBuffer)buffer.end());
+99
+                          ^
+100
+    method BufferUploader.bindImmediateBuffer(VertexFormat) is not applicable
+101
+      (argument mismatch; BufferBuilder.RenderedBuffer cannot be converted to VertexFormat)
+102
+    method BufferUploader.bindImmediateBuffer(VertexBuffer) is not applicable
+103
+      (argument mismatch; BufferBuilder.RenderedBuffer cannot be converted to VertexBuffer)
+104
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/overlay/ScreenEffectOverlayHelper.java:100: error: method enableScissor in class GuiGraphics cannot be applied to given types;
+105
+        PoseStack poseStack = guiGraphics.enableScissor();
+106
+                                         ^
+107
+  required: int,int,int,int
+108
+  found:    no arguments
+109
+  reason: actual and formal argument lists differ in length
+110
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/overlay/ScreenEffectOverlayHelper.java:105: error: no suitable method found for vertex(Mode,VertexFormat)
+111
+        buffer.vertex(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_COLOR);
+112
+              ^
+113
+    method VertexConsumer.vertex(Matrix4f,float,float,float) is not applicable
+114
+      (actual and formal argument lists differ in length)
+115
+    method BufferVertexConsumer.vertex(double,double,double) is not applicable
+116
+      (actual and formal argument lists differ in length)
+117
+    method BufferBuilder.vertex(float,float,float,float,float,float,float,float,float,int,int,float,float,float) is not applicable
+118
+      (actual and formal argument lists differ in length)
+119
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/overlay/ScreenEffectOverlayHelper.java:109: error: incompatible types: Matrix4f cannot be converted to Matrix3f
+120
+        buffer.normal(matrix, 0.0f, (float)screenHeight, 0.0f).normal(0.97f, 0.97f, 0.97f, inversionAlpha).endVertex();
+121
+                      ^
+122
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/overlay/ScreenEffectOverlayHelper.java:110: error: incompatible types: Matrix4f cannot be converted to Matrix3f
+123
+        buffer.normal(matrix, (float)screenWidth, (float)screenHeight, 0.0f).normal(0.97f, 0.97f, 0.97f, inversionAlpha).endVertex();
+124
+                      ^
+125
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/overlay/ScreenEffectOverlayHelper.java:111: error: incompatible types: Matrix4f cannot be converted to Matrix3f
+126
+        buffer.normal(matrix, (float)screenWidth, 0.0f, 0.0f).normal(0.97f, 0.97f, 0.97f, inversionAlpha).endVertex();
+127
+                      ^
+128
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/overlay/ScreenEffectOverlayHelper.java:112: error: incompatible types: Matrix4f cannot be converted to Matrix3f
+129
+        buffer.normal(matrix, 0.0f, 0.0f, 0.0f).normal(0.97f, 0.97f, 0.97f, inversionAlpha).endVertex();
+130
+                      ^
+131
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/overlay/ScreenEffectOverlayHelper.java:113: error: no suitable method found for bindImmediateBuffer(BufferBuilder.RenderedBuffer)
+132
+        BufferUploader.bindImmediateBuffer((BufferBuilder.RenderedBuffer)buffer.end());
+133
+                      ^
+134
+    method BufferUploader.bindImmediateBuffer(VertexFormat) is not applicable
+135
+      (argument mismatch; BufferBuilder.RenderedBuffer cannot be converted to VertexFormat)
+136
+    method BufferUploader.bindImmediateBuffer(VertexBuffer) is not applicable
+137
+      (argument mismatch; BufferBuilder.RenderedBuffer cannot be converted to VertexBuffer)
+138
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/overlay/ScreenEffectOverlayHelper.java:115: error: no suitable method found for vertex(Mode,VertexFormat)
+139
+        buffer.vertex(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_COLOR);
+140
+              ^
+141
+    method VertexConsumer.vertex(Matrix4f,float,float,float) is not applicable
+142
+      (actual and formal argument lists differ in length)
+143
+    method BufferVertexConsumer.vertex(double,double,double) is not applicable
+144
+      (actual and formal argument lists differ in length)
+145
+    method BufferBuilder.vertex(float,float,float,float,float,float,float,float,float,int,int,float,float,float) is not applicable
+146
+      (actual and formal argument lists differ in length)
+147
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/overlay/ScreenEffectOverlayHelper.java:119: error: incompatible types: Matrix4f cannot be converted to Matrix3f
+148
+        buffer.normal(matrix, 0.0f, (float)screenHeight, 0.0f).normal(contrastDarkness, contrastDarkness, contrastDarkness, contrastAlpha).endVertex();
+149
+                      ^
+150
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/overlay/ScreenEffectOverlayHelper.java:120: error: incompatible types: Matrix4f cannot be converted to Matrix3f
+151
+        buffer.normal(matrix, (float)screenWidth, (float)screenHeight, 0.0f).normal(contrastDarkness, contrastDarkness, contrastDarkness, contrastAlpha).endVertex();
+152
+                      ^
+153
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/overlay/ScreenEffectOverlayHelper.java:121: error: incompatible types: Matrix4f cannot be converted to Matrix3f
+154
+        buffer.normal(matrix, (float)screenWidth, 0.0f, 0.0f).normal(contrastDarkness, contrastDarkness, contrastDarkness, contrastAlpha).endVertex();
+155
+                      ^
+156
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/overlay/ScreenEffectOverlayHelper.java:122: error: incompatible types: Matrix4f cannot be converted to Matrix3f
+157
+        buffer.normal(matrix, 0.0f, 0.0f, 0.0f).normal(contrastDarkness, contrastDarkness, contrastDarkness, contrastAlpha).endVertex();
+158
+                      ^
+159
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/overlay/ScreenEffectOverlayHelper.java:123: error: no suitable method found for bindImmediateBuffer(BufferBuilder.RenderedBuffer)
+160
+        BufferUploader.bindImmediateBuffer((BufferBuilder.RenderedBuffer)buffer.end());
+161
+                      ^
+162
+    method BufferUploader.bindImmediateBuffer(VertexFormat) is not applicable
+163
+      (argument mismatch; BufferBuilder.RenderedBuffer cannot be converted to VertexFormat)
+164
+    method BufferUploader.bindImmediateBuffer(VertexBuffer) is not applicable
+165
+      (argument mismatch; BufferBuilder.RenderedBuffer cannot be converted to VertexBuffer)
+166
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/overlay/ScreenEffectOverlayHelper.java:129: error: method enableScissor in class GuiGraphics cannot be applied to given types;
+167
+        PoseStack poseStack = guiGraphics.enableScissor();
+168
+                                         ^
+169
+  required: int,int,int,int
+170
+  found:    no arguments
+171
+  reason: actual and formal argument lists differ in length
+172
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/overlay/ScreenEffectOverlayHelper.java:134: error: no suitable method found for vertex(Mode,VertexFormat)
+173
+        buffer.vertex(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_COLOR);
+174
+              ^
+175
+    method VertexConsumer.vertex(Matrix4f,float,float,float) is not applicable
+176
+      (actual and formal argument lists differ in length)
+177
+    method BufferVertexConsumer.vertex(double,double,double) is not applicable
+178
+      (actual and formal argument lists differ in length)
+179
+    method BufferBuilder.vertex(float,float,float,float,float,float,float,float,float,int,int,float,float,float) is not applicable
+180
+      (actual and formal argument lists differ in length)
+181
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/overlay/ScreenEffectOverlayHelper.java:138: error: incompatible types: Matrix4f cannot be converted to Matrix3f
+182
+        buffer.normal(matrix, 0.0f, (float)screenHeight, 0.0f).normal(grayValue, grayValue, grayValue, desatAlpha).endVertex();
+183
+                      ^
+184
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/overlay/ScreenEffectOverlayHelper.java:139: error: incompatible types: Matrix4f cannot be converted to Matrix3f
+185
+        buffer.normal(matrix, (float)screenWidth, (float)screenHeight, 0.0f).normal(grayValue, grayValue, grayValue, desatAlpha).endVertex();
+186
+                      ^
+187
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/overlay/ScreenEffectOverlayHelper.java:140: error: incompatible types: Matrix4f cannot be converted to Matrix3f
+188
+        buffer.normal(matrix, (float)screenWidth, 0.0f, 0.0f).normal(grayValue, grayValue, grayValue, desatAlpha).endVertex();
+189
+                      ^
+190
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/overlay/ScreenEffectOverlayHelper.java:141: error: incompatible types: Matrix4f cannot be converted to Matrix3f
+191
+        buffer.normal(matrix, 0.0f, 0.0f, 0.0f).normal(grayValue, grayValue, grayValue, desatAlpha).endVertex();
+192
+                      ^
+193
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/overlay/ScreenEffectOverlayHelper.java:142: error: no suitable method found for bindImmediateBuffer(BufferBuilder.RenderedBuffer)
+194
+        BufferUploader.bindImmediateBuffer((BufferBuilder.RenderedBuffer)buffer.end());
+195
+                      ^
+196
+    method BufferUploader.bindImmediateBuffer(VertexFormat) is not applicable
+197
+      (argument mismatch; BufferBuilder.RenderedBuffer cannot be converted to VertexFormat)
+198
+    method BufferUploader.bindImmediateBuffer(VertexBuffer) is not applicable
+199
+      (argument mismatch; BufferBuilder.RenderedBuffer cannot be converted to VertexBuffer)
+200
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/overlay/ScreenEffectOverlayHelper.java:149: error: no suitable method found for vertex(Mode,VertexFormat)
+201
+        buffer.vertex(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_COLOR);
+202
+              ^
+203
+    method VertexConsumer.vertex(Matrix4f,float,float,float) is not applicable
+204
+      (actual and formal argument lists differ in length)
+205
+    method BufferVertexConsumer.vertex(double,double,double) is not applicable
+206
+      (actual and formal argument lists differ in length)
+207
+    method BufferBuilder.vertex(float,float,float,float,float,float,float,float,float,int,int,float,float,float) is not applicable
+208
+      (actual and formal argument lists differ in length)
+209
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/overlay/ScreenEffectOverlayHelper.java:151: error: incompatible types: Matrix4f cannot be converted to Matrix3f
+210
+        buffer.normal(matrix, 0.0f, (float)screenHeight, 0.0f).normal(red, green, blue, alpha).endVertex();
+211
+                      ^
+212
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/overlay/ScreenEffectOverlayHelper.java:152: error: incompatible types: Matrix4f cannot be converted to Matrix3f
+213
+        buffer.normal(matrix, (float)screenWidth, (float)screenHeight, 0.0f).normal(red, green, blue, alpha).endVertex();
+214
+                      ^
+215
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/overlay/ScreenEffectOverlayHelper.java:153: error: incompatible types: Matrix4f cannot be converted to Matrix3f
+216
+        buffer.normal(matrix, (float)screenWidth, 0.0f, 0.0f).normal(red, green, blue, alpha).endVertex();
+217
+                      ^
+218
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/overlay/ScreenEffectOverlayHelper.java:154: error: incompatible types: Matrix4f cannot be converted to Matrix3f
+219
+        buffer.normal(matrix, 0.0f, 0.0f, 0.0f).normal(red, green, blue, alpha).endVertex();
+220
+                      ^
+221
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/overlay/ScreenEffectOverlayHelper.java:155: error: no suitable method found for bindImmediateBuffer(BufferBuilder.RenderedBuffer)
+222
+        BufferUploader.bindImmediateBuffer((BufferBuilder.RenderedBuffer)buffer.end());
+223
+                      ^
+224
+    method BufferUploader.bindImmediateBuffer(VertexFormat) is not applicable
+225
+      (argument mismatch; BufferBuilder.RenderedBuffer cannot be converted to VertexFormat)
+226
+    method BufferUploader.bindImmediateBuffer(VertexBuffer) is not applicable
+227
+      (argument mismatch; BufferBuilder.RenderedBuffer cannot be converted to VertexBuffer)
+228
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/entity/misc/TOPowerInversionEntity.java:42: error: method assignValue in class SynchedEntityData cannot be applied to given types;
+229
+    private static final EntityDataAccessor<Float> RADIUS = SynchedEntityData.assignValue(TOPowerInversionEntity.class, (EntityDataSerializer)EntityDataSerializers.FLOAT);
+230
+                                                                             ^
+231
+  required: DataItem<T>,DataValue<?>
+232
+  found:    Class<TOPowerInversionEntity>,EntityDataSerializer
+233
+  reason: cannot infer type-variable(s) T
+234
+    (argument mismatch; Class<TOPowerInversionEntity> cannot be converted to DataItem<T>)
+235
+  where T is a type-variable:
+236
+    T extends Object declared in method <T>assignValue(DataItem<T>,DataValue<?>)
+237
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/entity/misc/TOPowerInversionEntity.java:43: error: method assignValue in class SynchedEntityData cannot be applied to given types;
+238
+    private static final EntityDataAccessor<Float> INTENSITY = SynchedEntityData.assignValue(TOPowerInversionEntity.class, (EntityDataSerializer)EntityDataSerializers.FLOAT);
+239
+                                                                                ^
+240
+  required: DataItem<T>,DataValue<?>
+241
+  found:    Class<TOPowerInversionEntity>,EntityDataSerializer
+242
+  reason: cannot infer type-variable(s) T
+243
+    (argument mismatch; Class<TOPowerInversionEntity> cannot be converted to DataItem<T>)
+244
+  where T is a type-variable:
+245
+    T extends Object declared in method <T>assignValue(DataItem<T>,DataValue<?>)
+246
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/entity/misc/TOPowerInversionEntity.java:44: error: cannot find symbol
+247
+    private static final EntityDataAccessor<Integer> FADE_DURATION = SynchedEntityData.assignValue(TOPowerInversionEntity.class, (EntityDataSerializer)EntityDataSerializers.getSerializedId);
+248
+                                                                                                                                                                            ^
+249
+  symbol:   variable getSerializedId
+250
+  location: class EntityDataSerializers
+251
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/entity/misc/TOPowerInversionEntity.java:44: error: method assignValue in class SynchedEntityData cannot be applied to given types;
+252
+    private static final EntityDataAccessor<Integer> FADE_DURATION = SynchedEntityData.assignValue(TOPowerInversionEntity.class, (EntityDataSerializer)EntityDataSerializers.getSerializedId);
+253
+                                                                                      ^
+254
+  required: DataItem<T>,DataValue<?>
+255
+  found:    Class<TOPowerInversionEntity>,EntityDataSerializer
+256
+  reason: cannot infer type-variable(s) T
+257
+    (argument mismatch; Class<TOPowerInversionEntity> cannot be converted to DataItem<T>)
+258
+  where T is a type-variable:
+259
+    T extends Object declared in method <T>assignValue(DataItem<T>,DataValue<?>)
+260
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/entity/misc/TOPowerInversionEntity.java:45: error: method assignValue in class SynchedEntityData cannot be applied to given types;
+261
+    private static final EntityDataAccessor<Boolean> INVERT_COLORS = SynchedEntityData.assignValue(TOPowerInversionEntity.class, (EntityDataSerializer)EntityDataSerializers.BOOLEAN);
+262
+                                                                                      ^
+263
+  required: DataItem<T>,DataValue<?>
+264
+  found:    Class<TOPowerInversionEntity>,EntityDataSerializer
+265
+  reason: cannot infer type-variable(s) T
+266
+    (argument mismatch; Class<TOPowerInversionEntity> cannot be converted to DataItem<T>)
+267
+  where T is a type-variable:
+268
+    T extends Object declared in method <T>assignValue(DataItem<T>,DataValue<?>)
+269
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/entity/misc/TOPowerInversionEntity.java:46: error: cannot find symbol
+270
+    private static final EntityDataAccessor<Integer> FLASH_COLOR = SynchedEntityData.assignValue(TOPowerInversionEntity.class, (EntityDataSerializer)EntityDataSerializers.getSerializedId);
+271
+                                                                                                                                                                          ^
+272
+  symbol:   variable getSerializedId
+273
+  location: class EntityDataSerializers
+274
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/entity/misc/TOPowerInversionEntity.java:46: error: method assignValue in class SynchedEntityData cannot be applied to given types;
+275
+    private static final EntityDataAccessor<Integer> FLASH_COLOR = SynchedEntityData.assignValue(TOPowerInversionEntity.class, (EntityDataSerializer)EntityDataSerializers.getSerializedId);
+276
+                                                                                    ^
+277
+  required: DataItem<T>,DataValue<?>
+278
+  found:    Class<TOPowerInversionEntity>,EntityDataSerializer
+279
+  reason: cannot infer type-variable(s) T
+280
+    (argument mismatch; Class<TOPowerInversionEntity> cannot be converted to DataItem<T>)
+281
+  where T is a type-variable:
+282
+    T extends Object declared in method <T>assignValue(DataItem<T>,DataValue<?>)
+283
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/entity/misc/TOPowerInversionEntity.java:59: error: cannot find symbol
+284
+        this.setPos(position.z, position.multiply, position.reverse);
+285
+                                        ^
+286
+  symbol:   variable multiply
+287
+  location: variable position of type Vec3
+288
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/entity/misc/TOPowerInversionEntity.java:59: error: cannot find symbol
+289
+        this.setPos(position.z, position.multiply, position.reverse);
+290
+                                                           ^
+291
+  symbol:   variable reverse
+292
+  location: variable position of type Vec3
+293
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/entity/misc/TOPowerInversionEntity.java:64: error: cannot find symbol
+294
+        float ticksDelta = (float)this.getTags + delta;
+295
+                                      ^
+296
+  symbol: variable getTags
+297
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/entity/misc/TOPowerInversionEntity.java:65: error: incompatible types: possible lossy conversion from float to int
+298
+        Vec3 playerPos = player.setAirSupply(delta);
+299
+                                             ^
+300
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/entity/misc/TOPowerInversionEntity.java:66: error: method length in class Vec3 cannot be applied to given types;
+301
+        double distance = this.position().length(playerPos);
+302
+                                         ^
+303
+  required: no arguments
+304
+  found:    Vec3
+305
+  reason: actual and formal argument lists differ in length
+306
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/entity/misc/TOPowerInversionEntity.java:98: error: method lerpMotion in class Entity cannot be applied to given types;
+307
+        super.lerpMotion();
+308
+             ^
+309
+  required: double,double,double
+310
+  found:    no arguments
+311
+  reason: actual and formal argument lists differ in length
+312
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/entity/misc/TOPowerInversionEntity.java:100: error: cannot find symbol
+313
+        if (this.getTags > totalDuration) {
+314
+                ^
+315
+  symbol: variable getTags
+316
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/entity/misc/TOPowerInversionEntity.java:106: error: cannot find symbol
+317
+        this.makeBoundingBox.assignValue(RADIUS, (Object)Float.valueOf(15.0f));
+318
+            ^
+319
+  symbol: variable makeBoundingBox
+320
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/entity/misc/TOPowerInversionEntity.java:107: error: cannot find symbol
+321
+        this.makeBoundingBox.assignValue(INTENSITY, (Object)Float.valueOf(1.0f));
+322
+            ^
+323
+  symbol: variable makeBoundingBox
+324
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/entity/misc/TOPowerInversionEntity.java:108: error: cannot find symbol
+325
+        this.makeBoundingBox.assignValue(FADE_DURATION, (Object)20);
+326
+            ^
+327
+  symbol: variable makeBoundingBox
+328
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/entity/misc/TOPowerInversionEntity.java:109: error: cannot find symbol
+329
+        this.makeBoundingBox.assignValue(INVERT_COLORS, (Object)true);
+330
+            ^
+331
+  symbol: variable makeBoundingBox
+332
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/entity/misc/TOPowerInversionEntity.java:110: error: cannot find symbol
+333
+        this.makeBoundingBox.assignValue(FLASH_COLOR, (Object)0xF8F8F8);
+334
+            ^
+335
+  symbol: variable makeBoundingBox
+336
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/entity/misc/TOPowerInversionEntity.java:114: error: cannot find symbol
+337
+        return ((Float)this.makeBoundingBox.packDirty(RADIUS)).floatValue();
+338
+                           ^
+339
+  symbol: variable makeBoundingBox
+340
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/entity/misc/TOPowerInversionEntity.java:118: error: cannot find symbol
+341
+        this.makeBoundingBox.packDirty(RADIUS, (Object)Float.valueOf(radius));
+342
+            ^
+343
+  symbol: variable makeBoundingBox
+344
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/entity/misc/TOPowerInversionEntity.java:122: error: cannot find symbol
+345
+        return ((Float)this.makeBoundingBox.packDirty(INTENSITY)).floatValue();
+346
+                           ^
+347
+  symbol: variable makeBoundingBox
+348
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/entity/misc/TOPowerInversionEntity.java:126: error: cannot find symbol
+349
+        this.makeBoundingBox.packDirty(INTENSITY, (Object)Float.valueOf(intensity));
+350
+            ^
+351
+  symbol: variable makeBoundingBox
+352
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/entity/misc/TOPowerInversionEntity.java:130: error: cannot find symbol
+353
+        return (Integer)this.makeBoundingBox.packDirty(FADE_DURATION);
+354
+                            ^
+355
+  symbol: variable makeBoundingBox
+356
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/entity/misc/TOPowerInversionEntity.java:134: error: cannot find symbol
+357
+        this.makeBoundingBox.packDirty(FADE_DURATION, (Object)duration);
+358
+            ^
+359
+  symbol: variable makeBoundingBox
+360
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/entity/misc/TOPowerInversionEntity.java:138: error: cannot find symbol
+361
+        return (Boolean)this.makeBoundingBox.packDirty(INVERT_COLORS);
+362
+                            ^
+363
+  symbol: variable makeBoundingBox
+364
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/entity/misc/TOPowerInversionEntity.java:142: error: cannot find symbol
+365
+        this.makeBoundingBox.packDirty(INVERT_COLORS, (Object)invert);
+366
+            ^
+367
+  symbol: variable makeBoundingBox
+368
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/entity/misc/TOPowerInversionEntity.java:146: error: cannot find symbol
+369
+        return (Integer)this.makeBoundingBox.packDirty(FLASH_COLOR);
+370
+                            ^
+371
+  symbol: variable makeBoundingBox
+372
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/entity/misc/TOPowerInversionEntity.java:150: error: cannot find symbol
+373
+        this.makeBoundingBox.packDirty(FLASH_COLOR, (Object)color);
+374
+            ^
+375
+  symbol: variable makeBoundingBox
+376
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/entity/misc/TOPowerInversionEntity.java:156: error: method copy in class CompoundTag cannot be applied to given types;
+377
+        this.setFadeDuration(compound.copy("fade_duration"));
+378
+                                     ^
+379
+  required: no arguments
+380
+  found:    String
+381
+  reason: actual and formal argument lists differ in length
+382
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/entity/misc/TOPowerInversionEntity.java:158: error: method copy in class CompoundTag cannot be applied to given types;
+383
+        this.setFlashColor(compound.copy("flash_color"));
+384
+                                   ^
+385
+  required: no arguments
+386
+  found:    String
+387
+  reason: actual and formal argument lists differ in length
+388
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/entity/misc/TOPowerInversionEntity.java:159: error: cannot find symbol
+389
+        this.getTags = compound.copy("ticks_existed");
+390
+            ^
+391
+  symbol: variable getTags
+392
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/entity/misc/TOPowerInversionEntity.java:159: error: method copy in class CompoundTag cannot be applied to given types;
+393
+        this.getTags = compound.copy("ticks_existed");
+394
+                               ^
+395
+  required: no arguments
+396
+  found:    String
+397
+  reason: actual and formal argument lists differ in length
+398
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/entity/misc/TOPowerInversionEntity.java:163: error: no suitable method found for accept(String,float)
+399
+        compound.accept("radius", this.getRadius());
+400
+                ^
+401
+    method CompoundTag.accept(TagVisitor) is not applicable
+402
+      (actual and formal argument lists differ in length)
+403
+    method CompoundTag.accept(StreamTagVisitor) is not applicable
+404
+      (actual and formal argument lists differ in length)
+405
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/entity/misc/TOPowerInversionEntity.java:164: error: no suitable method found for accept(String,float)
+406
+        compound.accept("intensity", this.getIntensity());
+407
+                ^
+408
+    method CompoundTag.accept(TagVisitor) is not applicable
+409
+      (actual and formal argument lists differ in length)
+410
+    method CompoundTag.accept(StreamTagVisitor) is not applicable
+411
+      (actual and formal argument lists differ in length)
+412
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/entity/misc/TOPowerInversionEntity.java:165: error: no suitable method found for accept(String,int)
+413
+        compound.accept("fade_duration", this.getFadeDuration());
+414
+                ^
+415
+    method CompoundTag.accept(TagVisitor) is not applicable
+416
+      (actual and formal argument lists differ in length)
+417
+    method CompoundTag.accept(StreamTagVisitor) is not applicable
+418
+      (actual and formal argument lists differ in length)
+419
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/entity/misc/TOPowerInversionEntity.java:166: error: no suitable method found for accept(String,boolean)
+420
+        compound.accept("invert_colors", this.getInvertColors());
+421
+                ^
+422
+    method CompoundTag.accept(TagVisitor) is not applicable
+423
+      (actual and formal argument lists differ in length)
+424
+    method CompoundTag.accept(StreamTagVisitor) is not applicable
+425
+      (actual and formal argument lists differ in length)
+426
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/entity/misc/TOPowerInversionEntity.java:167: error: no suitable method found for accept(String,int)
+427
+        compound.accept("flash_color", this.getFlashColorValue());
+428
+                ^
+429
+    method CompoundTag.accept(TagVisitor) is not applicable
+430
+      (actual and formal argument lists differ in length)
+431
+    method CompoundTag.accept(StreamTagVisitor) is not applicable
+432
+      (actual and formal argument lists differ in length)
+433
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/entity/misc/TOPowerInversionEntity.java:168: error: cannot find symbol
+434
+        compound.accept("ticks_existed", this.getTags);
+435
+                                             ^
+436
+  symbol: variable getTags
+437
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/overlay/BossMessageOverlay.java:78: error: cannot find symbol
+438
+        if (mc.getTelemetryManager == null) {
+439
+              ^
+440
+  symbol:   variable getTelemetryManager
+441
+  location: variable mc of type Minecraft
+442
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/overlay/BossMessageOverlay.java:106: error: cannot find symbol
+443
+        int textWidth = mc.getVersionType.isBidirectional((FormattedText)currentMessage);
+444
+                          ^
+445
+  symbol:   variable getVersionType
+446
+  location: variable mc of type Minecraft
+447
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/overlay/BossMessageOverlay.java:107: error: cannot find symbol
+448
+        Objects.requireNonNull(mc.getVersionType);
+449
+                                 ^
+450
+  symbol:   variable getVersionType
+451
+  location: variable mc of type Minecraft
+452
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/overlay/BossMessageOverlay.java:131: error: cannot find symbol
+453
+        guiGraphics.renderComponentHoverEffect(mc.getVersionType, currentMessage, messageX, messageY, textColor, enableShadow);
+454
+                                                 ^
+455
+  symbol:   variable getVersionType
+456
+  location: variable mc of type Minecraft
+457
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/overlay/BossMessageOverlay.java:151: error: method renderComponentHoverEffect in class GuiGraphics cannot be applied to given types;
+458
+            guiGraphics.renderComponentHoverEffect(x + i, y, x + i + 1, y + height, columnColor);
+459
+                       ^
+460
+  required: Font,Style,int,int
+461
+  found:    int,int,int,int,int
+462
+  reason: actual and formal argument lists differ in length
+463
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/overlay/BossMessageOverlay.java:179: error: method renderComponentHoverEffect in class GuiGraphics cannot be applied to given types;
+464
+                guiGraphics.renderComponentHoverEffect(x + j, y + i, x + j + 1, y + i + 1, finalColor);
+465
+                           ^
+466
+  required: Font,Style,int,int
+467
+  found:    int,int,int,int,int
+468
+  reason: actual and formal argument lists differ in length
+469
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/overlay/BossMessageOverlay.java:191: error: method renderComponentHoverEffect in class GuiGraphics cannot be applied to given types;
+470
+                guiGraphics.renderComponentHoverEffect(x + j, y + height - edgeHeight + i, x + j + 1, y + height - edgeHeight + i + 1, finalColor);
+471
+                           ^
+472
+  required: Font,Style,int,int
+473
+  found:    int,int,int,int,int
+474
+  reason: actual and formal argument lists differ in length
+475
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/overlay/armor_overlay/PhantomRageOverlay.java:72: error: incompatible types: EquipmentSlot cannot be converted to BlockState
+476
+        ItemStack chestplate = player.shouldRemoveSoulSpeed(EquipmentSlot.CHEST);
+477
+                                                                         ^
+478
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/overlay/armor_overlay/PhantomRageOverlay.java:101: error: method enableScissor in class GuiGraphics cannot be applied to given types;
+479
+            PoseStack poseStack = guiGraphics.enableScissor();
+480
+                                             ^
+481
+  required: int,int,int,int
+482
+  found:    no arguments
+483
+  reason: actual and formal argument lists differ in length
+484
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/overlay/armor_overlay/PhantomRageOverlay.java:102: error: method mulPoseMatrix in class PoseStack cannot be applied to given types;
+485
+            poseStack.mulPoseMatrix();
+486
+                     ^
+487
+  required: Matrix4f
+488
+  found:    no arguments
+489
+  reason: actual and formal argument lists differ in length
+490
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/overlay/armor_overlay/PhantomRageOverlay.java:103: error: method renderComponentHoverEffect in class GuiGraphics cannot be applied to given types;
+491
+            guiGraphics.renderComponentHoverEffect(PHANTOM_RAGE_TEXTURE, x, y, 29.0f, 89.0f, 182, 5, 241, 115);
+492
+                       ^
+493
+  required: Font,Style,int,int
+494
+  found:    ResourceLocation,int,int,float,float,int,int,int,int
+495
+  reason: actual and formal argument lists differ in length
+496
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/overlay/armor_overlay/PhantomRageOverlay.java:106: error: method renderComponentHoverEffect in class GuiGraphics cannot be applied to given types;
+497
+                guiGraphics.renderComponentHoverEffect(PHANTOM_RAGE_TEXTURE, x, y, 29.0f, 99.0f, fillWidth, 5, 241, 115);
+498
+                           ^
+499
+  required: Font,Style,int,int
+500
+  found:    ResourceLocation,int,int,float,float,int,int,int,int
+501
+  reason: actual and formal argument lists differ in length
+502
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/overlay/armor_overlay/PhantomRageOverlay.java:109: error: method renderComponentHoverEffect in class GuiGraphics cannot be applied to given types;
+503
+                guiGraphics.renderComponentHoverEffect(PHANTOM_RAGE_TEXTURE, x, y, 29.0f, 78.0f, cooldownFillWidth, 5, 241, 115);
+504
+                           ^
+505
+  required: Font,Style,int,int
+506
+  found:    ResourceLocation,int,int,float,float,int,int,int,int
+507
+  reason: actual and formal argument lists differ in length
+508
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/overlay/armor_overlay/PhantomRageOverlay.java:118: error: method enableScissor in class GuiGraphics cannot be applied to given types;
+509
+            PoseStack poseStack = guiGraphics.enableScissor();
+510
+                                             ^
+511
+  required: int,int,int,int
+512
+  found:    no arguments
+513
+  reason: actual and formal argument lists differ in length
+514
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/overlay/armor_overlay/PhantomRageOverlay.java:119: error: method mulPoseMatrix in class PoseStack cannot be applied to given types;
+515
+            poseStack.mulPoseMatrix();
+516
+                     ^
+517
+  required: Matrix4f
+518
+  found:    no arguments
+519
+  reason: actual and formal argument lists differ in length
+520
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/overlay/armor_overlay/PhantomRageOverlay.java:120: error: method mulPoseMatrix in class PoseStack cannot be applied to given types;
+521
+            poseStack.mulPoseMatrix((double)x + (double)barWidth / 2.0, (double)y + (double)barHeight / 2.0, 0.0);
+522
+                     ^
+523
+  required: Matrix4f
+524
+  found:    double,double,double
+525
+  reason: actual and formal argument lists differ in length
+526
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/overlay/armor_overlay/PhantomRageOverlay.java:121: error: incompatible types: Quaternionf cannot be converted to Matrix4f
+527
+            poseStack.mulPoseMatrix(Axis.ZP.rotationDegrees(0.0f));
+528
+                                                           ^
+529
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/overlay/armor_overlay/PhantomRageOverlay.java:122: error: method popPose in class PoseStack cannot be applied to given types;
+530
+            poseStack.popPose(1.0f, 1.0f, 1.0f);
+531
+                     ^
+532
+  required: no arguments
+533
+  found:    float,float,float
+534
+  reason: actual and formal argument lists differ in length
+535
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/overlay/armor_overlay/PhantomRageOverlay.java:123: error: method mulPoseMatrix in class PoseStack cannot be applied to given types;
+536
+            poseStack.mulPoseMatrix((float)(-barWidth) / 2.0f, (float)(-barHeight) / 2.0f, 0.0f);
+537
+                     ^
+538
+  required: Matrix4f
+539
+  found:    float,float,float
+540
+  reason: actual and formal argument lists differ in length
+541
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/overlay/armor_overlay/PhantomRageOverlay.java:124: error: method renderComponentHoverEffect in class GuiGraphics cannot be applied to given types;
+542
+            guiGraphics.renderComponentHoverEffect(PHANTOM_RAGE_TEXTURE, 0, 0, 55.0f, 28.0f, 130, 21, 241, 115);
+543
+                       ^
+544
+  required: Font,Style,int,int
+545
+  found:    ResourceLocation,int,int,float,float,int,int,int,int
+546
+  reason: actual and formal argument lists differ in length
+547
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/overlay/armor_overlay/PhantomRageOverlay.java:127: error: method renderComponentHoverEffect in class GuiGraphics cannot be applied to given types;
+548
+                guiGraphics.renderComponentHoverEffect(PHANTOM_RAGE_TEXTURE, 0, 0, 55.0f, 51.0f, fillWidth, 21, 241, 115);
+549
+                           ^
+550
+  required: Font,Style,int,int
+551
+  found:    ResourceLocation,int,int,float,float,int,int,int,int
+552
+  reason: actual and formal argument lists differ in length
+553
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/spells/ice/DespairSpell.java:107: warning: [removal] findEquippedCurio(Item,LivingEntity) in ICuriosHelper has been deprecated and marked for removal
+554
+        boolean hasRingEquipped = CuriosApi.getCuriosHelper().findEquippedCurio((Item)TravelopticsItems.AETHERIAL_DESPAIR_RING.get(), entity).isPresent();
+555
+                                                             ^
+556
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/spells/eldritch/ReversalSpell.java:106: warning: [removal] findEquippedCurio(Item,LivingEntity) in ICuriosHelper has been deprecated and marked for removal
+557
+        boolean hasCurio = CuriosApi.getCuriosHelper().findEquippedCurio((Item)TravelopticsItems.NIGHTSTALKERS_BAND.get(), entity).isPresent();
+558
+                                                      ^
+559
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/spells/TravelopticsSpellAnimations.java:15: warning: [removal] AnimationHolder(String,boolean,boolean) in AnimationHolder has been deprecated and marked for removal
+560
+    public static final AnimationHolder AERIAL_COLLAPSE = new AnimationHolder("traveloptics:aerial_collapse", true, true);
+561
+                                                          ^
+562
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/spells/TravelopticsSpellAnimations.java:17: warning: [removal] AnimationHolder(String,boolean,boolean) in AnimationHolder has been deprecated and marked for removal
+563
+    public static final AnimationHolder MIASMA_END = new AnimationHolder("traveloptics:miasma_end", true, true);
+564
+                                                     ^
+565
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/spells/TravelopticsSpellAnimations.java:18: warning: [removal] AnimationHolder(String,boolean,boolean) in AnimationHolder has been deprecated and marked for removal
+566
+    public static final AnimationHolder SPECTRAL_BLINK = new AnimationHolder("traveloptics:spectral_blink", true, false);
+567
+                                                         ^
+568
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/spells/TravelopticsSpellAnimations.java:19: warning: [removal] AnimationHolder(String,boolean,boolean) in AnimationHolder has been deprecated and marked for removal
+569
+    public static final AnimationHolder SHOOT_WINDUP = new AnimationHolder("traveloptics:blood_howl_windup", true, true);
+570
+                                                       ^
+571
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/spells/TravelopticsSpellAnimations.java:20: warning: [removal] AnimationHolder(String,boolean,boolean) in AnimationHolder has been deprecated and marked for removal
+572
+    public static final AnimationHolder SHOOT = new AnimationHolder("traveloptics:blood_howl_shoot", true, true);
+573
+                                                ^
+574
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/spells/TravelopticsSpellAnimations.java:21: warning: [removal] AnimationHolder(String,boolean,boolean) in AnimationHolder has been deprecated and marked for removal
+575
+    public static final AnimationHolder VIGOR_SIPHON = new AnimationHolder("traveloptics:vigor_siphon", true, false);
+576
+                                                       ^
+577
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/spells/TravelopticsSpellAnimations.java:22: warning: [removal] AnimationHolder(String,boolean,boolean) in AnimationHolder has been deprecated and marked for removal
+578
+    public static final AnimationHolder JUDGMENT_START = new AnimationHolder("traveloptics:judgment_start", true, false);
+579
+                                                         ^
+580
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/spells/TravelopticsSpellAnimations.java:23: warning: [removal] AnimationHolder(String,boolean,boolean) in AnimationHolder has been deprecated and marked for removal
+581
+    public static final AnimationHolder JUDGMENT_FINISH = new AnimationHolder("traveloptics:judgment_finish", true, true);
+582
+                                                          ^
+583
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/spells/TravelopticsSpellAnimations.java:24: warning: [removal] AnimationHolder(String,boolean,boolean) in AnimationHolder has been deprecated and marked for removal
+584
+    public static final AnimationHolder NULLFLARE_START = new AnimationHolder("traveloptics:nullflare_start", true, false);
+585
+                                                          ^
+586
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/spells/TravelopticsSpellAnimations.java:25: warning: [removal] AnimationHolder(String,boolean,boolean) in AnimationHolder has been deprecated and marked for removal
+587
+    public static final AnimationHolder NULLFLARE_FINISH = new AnimationHolder("traveloptics:nullflare_finish", true, false);
+588
+                                                           ^
+589
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/spells/TravelopticsSpellAnimations.java:26: warning: [removal] AnimationHolder(String,boolean,boolean) in AnimationHolder has been deprecated and marked for removal
+590
+    public static final AnimationHolder CURSED_MINEFIELD_CAST = new AnimationHolder("traveloptics:cursed_minefield_cast", true, false);
+591
+                                                                ^
+592
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/spells/TravelopticsSpellAnimations.java:28: warning: [removal] AnimationHolder(String,boolean,boolean) in AnimationHolder has been deprecated and marked for removal
+593
+    public static final AnimationHolder GUNBLADE_CHARGE = new AnimationHolder("traveloptics:gunblade_charge", true, true);
+594
+                                                          ^
+595
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/spells/TravelopticsSpellAnimations.java:29: warning: [removal] AnimationHolder(String,boolean,boolean) in AnimationHolder has been deprecated and marked for removal
+596
+    public static final AnimationHolder GUNBLADE_SHOOT = new AnimationHolder("traveloptics:gunblade_shoot", true, true);
+597
+                                                         ^
+598
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/spells/TravelopticsSpellAnimations.java:30: warning: [removal] AnimationHolder(String,boolean,boolean) in AnimationHolder has been deprecated and marked for removal
+599
+    public static final AnimationHolder DESPAIR_SLASH = new AnimationHolder("traveloptics:despair_slash", true, true);
+600
+                                                        ^
+601
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/spells/TravelopticsSpellAnimations.java:31: warning: [removal] AnimationHolder(String,boolean,boolean) in AnimationHolder has been deprecated and marked for removal
+602
+    public static final AnimationHolder VORTEX_PUNCH_CHARGE = new AnimationHolder("traveloptics:vortex_punch_start", true, true);
+603
+                                                              ^
+604
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/spells/TravelopticsSpellAnimations.java:32: warning: [removal] AnimationHolder(String,boolean,boolean) in AnimationHolder has been deprecated and marked for removal
+605
+    public static final AnimationHolder VORTEX_PUNCH = new AnimationHolder("traveloptics:vortex_punch", true, false);
+606
+                                                       ^
+607
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/spells/TravelopticsSpellAnimations.java:33: warning: [removal] AnimationHolder(String,boolean,boolean) in AnimationHolder has been deprecated and marked for removal
+608
+    public static final AnimationHolder METEOR_STORM_CAST = new AnimationHolder("traveloptics:meteor_storm_cast", true, true);
+609
+                                                            ^
+610
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/spells/TravelopticsSpellAnimations.java:34: warning: [removal] AnimationHolder(String,boolean,boolean) in AnimationHolder has been deprecated and marked for removal
+611
+    public static final AnimationHolder HALBERD_HORIZON_CAST = new AnimationHolder("traveloptics:halberd_horizon_cast", true, true);
+612
+                                                               ^
+613
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/spells/TravelopticsSpellAnimations.java:35: warning: [removal] AnimationHolder(String,boolean,boolean) in AnimationHolder has been deprecated and marked for removal
+614
+    public static final AnimationHolder HALBERD_HORIZON_FINISH = new AnimationHolder("traveloptics:halberd_horizon_finish", true, true);
+615
+                                                                 ^
+616
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/spells/TravelopticsSpellAnimations.java:36: warning: [removal] AnimationHolder(String,boolean,boolean) in AnimationHolder has been deprecated and marked for removal
+617
+    public static final AnimationHolder BANISH_CHARGE = new AnimationHolder("traveloptics:banish_charge", true, true);
+618
+                                                        ^
+619
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/spells/TravelopticsSpellAnimations.java:37: warning: [removal] AnimationHolder(String,boolean,boolean) in AnimationHolder has been deprecated and marked for removal
+620
+    public static final AnimationHolder BANISH_FINISH = new AnimationHolder("traveloptics:banish_finish", true, true);
+621
+                                                        ^
+622
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/spells/TravelopticsSpellAnimations.java:38: warning: [removal] AnimationHolder(String,boolean,boolean) in AnimationHolder has been deprecated and marked for removal
+623
+    public static final AnimationHolder TECTONIC_RIFT_CAST = new AnimationHolder("traveloptics:tectonic_rift_cast", true, false);
+624
+                                                             ^
+625
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/spells/TravelopticsSpellAnimations.java:39: warning: [removal] AnimationHolder(String,boolean,boolean) in AnimationHolder has been deprecated and marked for removal
+626
+    public static final AnimationHolder GYRO_SLASH_CAST = new AnimationHolder("traveloptics:gyro_slash_cast", true, true);
+627
+                                                          ^
+628
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/spells/TravelopticsSpellAnimations.java:40: warning: [removal] AnimationHolder(String,boolean,boolean) in AnimationHolder has been deprecated and marked for removal
+629
+    public static final AnimationHolder GYRO_SLASH_FINISH = new AnimationHolder("traveloptics:gyro_slash_finish", true, true);
+630
+                                                            ^
+631
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/spells/TravelopticsSpellAnimations.java:41: warning: [removal] AnimationHolder(String,boolean,boolean) in AnimationHolder has been deprecated and marked for removal
+632
+    public static final AnimationHolder TIDAL_GRASP = new AnimationHolder("traveloptics:tidal_grasp", true, true);
+633
+                                                      ^
+634
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/spells/TravelopticsSpellAnimations.java:42: warning: [removal] AnimationHolder(String,boolean,boolean) in AnimationHolder has been deprecated and marked for removal
+635
+    public static final AnimationHolder TIDAL_GRASP_SMACK = new AnimationHolder("traveloptics:tidal_grasp_smack", true, true);
+636
+                                                            ^
+637
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/spells/TravelopticsSpellAnimations.java:43: warning: [removal] AnimationHolder(String,boolean,boolean) in AnimationHolder has been deprecated and marked for removal
+638
+    public static final AnimationHolder AQUA_MISSILES_LOOP = new AnimationHolder("traveloptics:aqua_missiles_loop", true, true);
+639
+                                                             ^
+640
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/spells/TravelopticsSpellAnimations.java:44: warning: [removal] AnimationHolder(String,boolean,boolean) in AnimationHolder has been deprecated and marked for removal
+641
+    public static final AnimationHolder TSUNAMI_PREPARE = new AnimationHolder("traveloptics:tsunami_prepare", true, true);
+642
+                                                          ^
+643
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/spells/TravelopticsSpellAnimations.java:45: warning: [removal] AnimationHolder(String,boolean,boolean) in AnimationHolder has been deprecated and marked for removal
+644
+    public static final AnimationHolder TSUNAMI_FINISH = new AnimationHolder("traveloptics:tsunami_finish", true, true);
+645
+                                                         ^
+646
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/spells/TravelopticsSpellAnimations.java:46: warning: [removal] AnimationHolder(String,boolean,boolean) in AnimationHolder has been deprecated and marked for removal
+647
+    public static final AnimationHolder SUPERNOVA_CHARGE = new AnimationHolder("traveloptics:supernova_charge", true, false);
+648
+                                                           ^
+649
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/spells/TravelopticsSpellAnimations.java:47: warning: [removal] AnimationHolder(String,boolean,boolean) in AnimationHolder has been deprecated and marked for removal
+650
+    public static final AnimationHolder SHEAR_OF_STARS_CHARGE = new AnimationHolder("traveloptics:shear_of_stars_charge", true, false);
+651
+                                                                ^
+652
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/spells/TravelopticsSpellAnimations.java:48: warning: [removal] AnimationHolder(String,boolean,boolean) in AnimationHolder has been deprecated and marked for removal
+653
+    public static final AnimationHolder SHEAR_OF_STARS_CAST = new AnimationHolder("traveloptics:shear_of_stars_cast", true, false);
+654
+                                                              ^
+655
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/spells/TravelopticsSpellAnimations.java:49: warning: [removal] AnimationHolder(String,boolean,boolean) in AnimationHolder has been deprecated and marked for removal
+656
+    public static final AnimationHolder SKYPIERCER_CAST = new AnimationHolder("traveloptics:skypiercer_cast", true, false);
+657
+                                                          ^
+658
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/spells/TravelopticsSpellAnimations.java:50: warning: [removal] AnimationHolder(String,boolean,boolean) in AnimationHolder has been deprecated and marked for removal
+659
+    public static final AnimationHolder SERPENTIDE_CAST = new AnimationHolder("traveloptics:serpentide_cast", true, false);
+660
+                                                          ^
+661
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/api/item/curio/CurioBaseItem.java:38: warning: [removal] findFirstCurio(LivingEntity,Item) in ICuriosHelper has been deprecated and marked for removal
+662
+        return entity != null && CuriosApi.getCuriosHelper().findFirstCurio(entity, (Item)this).isPresent();
+663
+                                                            ^
+664
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/api/item/GeoArmorItem.java:122: warning: [removal] onArmorTick(ItemStack,Level,Player) in IForgeItem has been deprecated and marked for removal
+665
+    public void onArmorTick(ItemStack stack, Level world, Player player) {
+666
+                ^
+667
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/effects/Reversal/ReversalEffect.java:84: warning: [removal] findEquippedCurio(Item,LivingEntity) in ICuriosHelper has been deprecated and marked for removal
+668
+            if (CuriosApi.getCuriosHelper().findEquippedCurio((Item)TravelopticsItems.NIGHTSTALKERS_BAND.get(), entity).isPresent()) {
+669
+                                           ^
+670
+/home/runner/work/TOtest4/TOtest4/src/main/java/com/gametechbc/traveloptics/effects/SpectralBlinkEffect.java:83: warning: [removal] findEquippedCurio(Item,LivingEntity) in ICuriosHelper has been deprecated and marked for removal
+671
+        boolean hasSpectralShift = CuriosApi.getCuriosHelper().findEquippedCurio((Item)TravelopticsItems.AMULET_OF_SPECTRAL_SHIFT.get(), entity).isPresent();
+672
+                                                              ^
+673
+Note: Some input files use or override a deprecated API.
+674
+Note: Recompile with -Xlint:deprecation for details.
+675
+> Task :compileJava FAILED
+676
+Note: Some input files use unchecked or unsafe operations.
+677
+Note: Recompile with -Xlint:unchecked for details.
+678
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+679
+100 errors
+680
+40 warnings
+681
+only showing the first 100 errors, of 7280 total; use -Xmaxerrs if you would like to see more
+682
+FAILURE: Build failed with an exception.
+683
+* What went wrong:
+684
+Execution failed for task ':compileJava'.
+685
+> Compilation failed; see the compiler error output for details.
+686
+* Try:
+687
+> Run with --info or --debug option to get more log output.
+688
+> Run with --scan to get full insights.
+689
+* Exception is:
+690
+org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':compileJava'.
+691
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.lambda$executeIfValid$1(ExecuteActionsTaskExecuter.java:149)
+692
+	at org.gradle.internal.Try$Failure.ifSuccessfulOrElse(Try.java:282)
+693
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeIfValid(ExecuteActionsTaskExecuter.java:147)
+694
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.execute(ExecuteActionsTaskExecuter.java:135)
+695
+	at org.gradle.api.internal.tasks.execution.FinalizePropertiesTaskExecuter.execute(FinalizePropertiesTaskExecuter.java:46)
+696
+	at org.gradle.api.internal.tasks.execution.ResolveTaskExecutionModeExecuter.execute(ResolveTaskExecutionModeExecuter.java:51)
+697
+	at org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter.execute(SkipTaskWithNoActionsExecuter.java:57)
+698
+	at org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter.execute(SkipOnlyIfTaskExecuter.java:74)
+699
+	at org.gradle.api.internal.tasks.execution.CatchExceptionTaskExecuter.execute(CatchExceptionTaskExecuter.java:36)
+700
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.executeTask(EventFiringTaskExecuter.java:77)
+701
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:55)
+702
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:52)
+703
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+704
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:199)
+705
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+706
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+707
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+708
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+709
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+710
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:73)
+711
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter.execute(EventFiringTaskExecuter.java:52)
+712
+	at org.gradle.execution.plan.LocalTaskNodeExecutor.execute(LocalTaskNodeExecutor.java:42)
+713
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:337)
+714
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:324)
+715
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:317)
+716
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:303)
+717
+	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:463)
+718
+	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:380)
+719
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+720
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:49)
+721
+Caused by: org.gradle.api.internal.tasks.compile.CompilationFailedException: Compilation failed; see the compiler error output for details.
+722
+	at org.gradle.api.internal.tasks.compile.JdkJavaCompiler.execute(JdkJavaCompiler.java:57)
+723
+	at org.gradle.api.internal.tasks.compile.JdkJavaCompiler.execute(JdkJavaCompiler.java:39)
+724
+	at org.gradle.api.internal.tasks.compile.daemon.AbstractIsolatedCompilerWorkerExecutor$CompilerWorkAction.execute(AbstractIsolatedCompilerWorkerExecutor.java:78)
+725
+	at org.gradle.workers.internal.DefaultWorkerServer.execute(DefaultWorkerServer.java:63)
+726
+	at org.gradle.workers.internal.AbstractClassLoaderWorker$1.create(AbstractClassLoaderWorker.java:54)
+727
+	at org.gradle.workers.internal.AbstractClassLoaderWorker$1.create(AbstractClassLoaderWorker.java:48)
+728
+	at org.gradle.internal.classloader.ClassLoaderUtils.executeInClassloader(ClassLoaderUtils.java:100)
+729
+	at org.gradle.workers.internal.AbstractClassLoaderWorker.executeInClassLoader(AbstractClassLoaderWorker.java:48)
+730
+	at org.gradle.workers.internal.FlatClassLoaderWorker.run(FlatClassLoaderWorker.java:32)
+731
+	at org.gradle.workers.internal.FlatClassLoaderWorker.run(FlatClassLoaderWorker.java:22)
+732
+	at org.gradle.workers.internal.WorkerDaemonServer.run(WorkerDaemonServer.java:96)
+733
+	at org.gradle.workers.internal.WorkerDaemonServer.run(WorkerDaemonServer.java:65)
+734
+	at org.gradle.process.internal.worker.request.WorkerAction$1.call(WorkerAction.java:138)
+735
+	at org.gradle.process.internal.worker.child.WorkerLogEventListener.withWorkerLoggingProtocol(WorkerLogEventListener.java:41)
+736
+	at org.gradle.process.internal.worker.request.WorkerAction.run(WorkerAction.java:135)
+737
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+738
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+739
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+740
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+741
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+742
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:182)
+743
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:164)
+744
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:414)
+745
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+746
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:49)
+747
+* Get more help at https://help.gradle.org
+748
+BUILD FAILED in 2m
+749
+1 actionable task: 1 executed
